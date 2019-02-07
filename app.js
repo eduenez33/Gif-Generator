@@ -5,6 +5,9 @@ const port = 8080;
 
 app.set("view engine", "ejs");
 
+// Serve files from the js directory
+app.use(express.static("js"));
+
 app.get("/", function(req, res) {
   request(
     "https://api.giphy.com/v1/gifs/random?api_key=EWP0EWYETgFl8Tl4quH2zg4gdfgl3MWX",
@@ -19,4 +22,5 @@ app.get("/", function(req, res) {
   );
 });
 
+// Start the express web server listening on 8080
 app.listen(port);

@@ -1,5 +1,13 @@
 <% include ../partials/head.ejs %>
-
-<img src="<%= gif %>" />
+<div class="container">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="<%= gif %>" />
+    <div class="card-body">
+      <button class="btn btn-primary" id="button" type="submit">
+        Generate
+      </button>
+    </div>
+  </div>
+</div>
 
 <% include ../partials/footer.ejs %>
